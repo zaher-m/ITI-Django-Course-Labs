@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Student's Data{% endblock %}
+
+{% block pagecontent %}
+<h1>Student Data</h1>
+
+{% if student %}
+<h2>ID: {{ student.id }}</h2>
+<h2>Name: {{ student.name }}</h2>
+<h2>Age: {{ student.age }}</h2>
+
+{% if student.img %}
+<img src="{% static 'images/'|add:student.img %}" alt="{{ student.name }}'s photo" width="150" height="150"
+    style="border-radius: 8px; margin-top: 10px;">
+{% else %}
+<p><em>No image available.</em></p>
+{% endif %}
+{% else %}
+<p>Student not found.</p>
+{% endif %}
+{% endblock %}
