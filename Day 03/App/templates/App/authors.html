@@ -1,0 +1,18 @@
+    {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Authors{% endblock %}
+
+{% block pagecontent %}
+<h2>Authors List</h2>
+
+{% if authors %}
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.name }} — {{ author.country }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No authors found.</p>
+{% endif %}
+{% endblock %}

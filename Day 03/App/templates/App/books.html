@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Books{% endblock %}
+
+{% block pagecontent %}
+
+
+{% if objects %}
+    <table border>
+        <thead>
+            <tr>
+                <th>Title </th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in objects %}
+            <tr>
+                <td><a href="{% url 'book-show' book.id %}">{{ book.title}}</a></td>
+                <td>{{ book.auther.name }}</td>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No books available.</p>
+{% endif %}
+{% endblock %}

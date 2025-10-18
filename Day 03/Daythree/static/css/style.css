@@ -1,0 +1,170 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    background-color: #1e2337;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.nav-bar a:hover {
+    color: #00bcd4;
+}
+
+table {
+    margin: 60px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+thead {
+    background-color: #152b67;
+    color: #fff;
+}
+thead th {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+tbody td {
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+tbody tr:hover {
+    background-color: #f1f9fc;
+}
+
+td a {
+    color: #0091a4;
+    text-decoration: none;
+    font-weight: 500;
+}
+td a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #e6e6e6;
+    padding: 8px 14px;
+    transition: background-color 0.2s ease;
+}
+button a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+button:hover {
+    background-color: #e80202;
+}
+
+
+.container {
+    width: 60%;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 30px;
+}
+h2 {
+    margin: 15px 0;
+    font-weight: normal;
+}
+p {
+    text-align: center;
+    color: #888;
+}
+
+.btn-back {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  .btn-back:hover {
+    background-color: #45a049;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f8f9fa;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.book-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px 25px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.book-card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.book-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

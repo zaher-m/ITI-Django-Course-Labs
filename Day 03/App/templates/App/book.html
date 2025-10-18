@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block pagecontent %}
+<div class="book-card">
+    <h2>{{ book.title }}</h2>
+    <p><strong>Author:</strong> <a href="{% url 'author-show' book.auther.id  %}">{{ book.auther.name }}</a></p>
+    <p><strong>Price:</strong> ${{ book.price }}</p>
+    <p><strong>Published:</strong> {{ book.published|date:"F j, Y" }}</p>
+    <p><strong>Age Group:</strong> {{ book.appropreiate }}</p>
+</div>
+
+{% endblock %}

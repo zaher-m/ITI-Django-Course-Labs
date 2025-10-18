@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+<h1>{{author.name}} </h1>
+
+{% if author_books %}
+    <table border>
+        <thead>
+            <tr>
+                <th>Title </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in author_books %}
+            <tr>
+                <td>{{ book.title}}</a></td>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No books available.</p>
+{% endif %}
+
+{% endblock %}
