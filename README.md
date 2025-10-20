@@ -2,8 +2,6 @@
 
 A collection of Django labs built as part of ITI's Django course.
 
-[https://github.com/zaher-m/ITI-Django-Course-Labs](https://github.com/zaher-m/ITI-Django-Course-Labs)
-
 ## Labs
 
 <details>
