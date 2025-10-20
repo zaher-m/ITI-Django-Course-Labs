@@ -1,0 +1,40 @@
+{
+    "folders": [
+      {
+        "path": "."
+      }
+    ],
+    "settings": {
+      // --- Disable popular code-generation extensions ---
+      "github.copilot.enable": {
+        "*": false
+      },
+      "github.copilot.inlineSuggest.enable": false,
+      "github.copilot.chat.enabled": false,
+      "tabnine.experimentalAutoImports": false,
+      "tabnine.inlineCompletion": false,
+      "codeium.enableCodeCompletion": false,
+      "codeium.enableCompletions": false,
+      "codeium.enableChat": false,
+      "continue.enable": false,
+  
+      // --- Also disable inline or AI suggestions globally ---
+      "editor.inlineSuggest.enabled": false,
+      "editor.suggest.showSnippets": false,
+  
+      // --- Optional: disable workspace trust (prevents extensions from auto-running) ---
+      "security.workspace.trust.enabled": false
+    },
+    "extensions": {
+      // Disable these extensions for this workspace
+      "recommendations": [],
+      "unwantedRecommendations": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "TabNine.tabnine-vscode",
+        "Codeium.codeium",
+        "continue.continue"
+      ]
+    }
+  }
+  

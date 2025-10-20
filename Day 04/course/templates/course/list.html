@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>All Courses</h1>
+<a href="{% url 'course_create' %}">+ Add New Course</a>
+<hr>
+{% if courses %}
+<ul>
+    {% for course in courses %}
+    <li>
+        {{ course.code }} — {{ course.name }}
+        <a href="{% url 'course_update' course.code %}">Edit</a>
+        <a href="{% url 'course_delete' course.code %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No courses available.</p>
+{% endif %}
+
+{% endblock %}
