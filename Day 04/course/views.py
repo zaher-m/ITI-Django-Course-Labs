@@ -1,40 +1,38 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Course
-from .forms import CourseForm
 
-# List Courses
+
 def course_list(request):
     courses = Course.objects.all()
     return render(request, 'course/list.html', {'courses': courses})
 
 def course_create(request):
-    if request.method == 'POST':
-        form = CourseForm(request.POST)
-        if form.is_valid():
-            Course.objects.create(
-                code=form.cleaned_data['code'],
-                name=form.cleaned_data['name']
-            )
+    if request.method == "POST":
+        name = request.POST.get('name')
+        if name:
+            Course.objects.create(name=name.strip())
             return redirect('course_list')
-    else:
-        form = CourseForm()
-    return render(request, 'course/create.html', {'form': form})
+        else:
+            error = "Course name cannot be empty!!"
+            return render(request, 'course/create.html', {'error': error})
+    
+    return render(request, 'course/create.html')
 
 def course_update(request, pk):
     course = get_object_or_404(Course, pk=pk)
-    if request.method == 'POST':
-        form = CourseForm(request.POST)
-        if form.is_valid():
-            course.code = form.cleaned_data['code']
-            course.name = form.cleaned_data['name']
+    print(course)
+    if request.method == "POST":
+        name = request.POST.get('name')
+        print(name)
+        if name:
+            course.name = name.strip()
             course.save()
             return redirect('course_list')
-    else:
-        form = CourseForm(initial={
-            'code': course.code,
-            'name': course.name
-        })
-    return render(request, 'course/update.html', {'form': form, 'course': course})
+        else:
+            error = "Course name cannot be empty!!!"
+            return render(request, 'course/update.html', {'error': error, 'course': course})
+    
+    return render(request, 'course/update.html', {'course': course})
 
 def course_delete(request, pk):
     course = get_object_or_404(Course, pk=pk)

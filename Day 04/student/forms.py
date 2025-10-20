@@ -11,7 +11,7 @@ class StudentForm(forms.Form):
         label="Name"
     )
     age = forms.IntegerField(required=True, label="Age")
-    image = forms.FileField(required=False, label="Profile Image")
+    image = forms.FileField(required=True, label="Profile Image")
     dob = forms.DateField(
         required=True, 
         label="Date of Birth",
